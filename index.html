@@ -25,10 +25,11 @@
   <header class="header">
     <div class="container">
       <a href="index.html" class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
-        Trentelman AI
+        <img src="assets/images/logo.png" alt="Trentelman AI Solutions" class="logo-img">
+        <span class="logo-text">
+          <span class="logo-text-main">Trentelman AI</span>
+          <span class="logo-text-sub">Solutions</span>
+        </span>
       </a>
       <nav class="nav">
         <a href="transcriptie/index.html" class="nav-link">Transcriptie</a>
@@ -77,7 +78,7 @@
         </div>
         <div class="hero-visual">
           <div class="hero-image-wrapper">
-            <div class="image-placeholder">Foto Patrick<br>komt hier</div>
+            <img src="assets/images/patrick-headshot.png" alt="Patrick Trentelman - AI Expert" class="hero-image">
             <div class="hero-floating-card top">
               Microsoft Azure Certified
             </div>
@@ -158,13 +159,13 @@
   <!-- Services Section -->
   <section class="section section--light" id="diensten">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-label">Drie pijlers</span>
         <h2>Hoe ik u kan helpen</h2>
         <p>Van kant-en-klare producten tot volledige AI-transformatie. Kies wat past bij uw situatie.</p>
       </div>
 
-      <div class="grid-3">
+      <div class="grid-3 reveal-stagger">
         <a href="transcriptie/index.html" class="card">
           <div class="card-image" style="background: linear-gradient(135deg, #0A2540 0%, #1a3a5c 100%);">
             <span style="color: white;">&#127908;</span>
@@ -204,7 +205,7 @@
   <!-- Social Proof / Testimonial -->
   <section class="testimonial">
     <div class="container">
-      <div class="testimonial-inner">
+      <div class="testimonial-inner reveal-scale">
         <div class="testimonial-badge">
           <span>Stichting</span>
           <span>Attenta</span>
@@ -224,13 +225,13 @@
   <!-- Results Section -->
   <section class="section section--dark" id="results">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-label" style="color: rgba(255,255,255,0.5);">Bewezen resultaat</span>
         <h2>Cijfers die spreken</h2>
         <p>Geen beloftes, maar meetbare impact bij echte organisaties.</p>
       </div>
 
-      <div class="grid-4">
+      <div class="grid-4 reveal-stagger">
         <div class="stat-item">
           <div class="stat-number">4.500</div>
           <div class="stat-label">Uren bespaard/jaar</div>
@@ -254,10 +255,10 @@
   <!-- About Teaser -->
   <section class="about" id="over">
     <div class="container">
-      <div class="about-image">
-        <div class="image-placeholder" style="height: 400px; border-radius: var(--radius-sm);">Foto Patrick<br>komt hier</div>
+      <div class="about-image reveal-left">
+        <img src="assets/images/patrick-speaking.jpg" alt="Patrick Trentelman als spreker" class="about-img">
       </div>
-      <div class="about-content">
+      <div class="about-content reveal-right">
         <span class="section-label">Over Patrick</span>
         <h2>De meester die techneut werd</h2>
         <p>Geen standaard IT-consultant. Ik stond jaren voor de klas en won innovatieprijzen met mijn startup Space Time Layers. Die combinatie van <strong>didactiek</strong> en <strong>technologie</strong> is mijn kracht.</p>
@@ -281,7 +282,7 @@
   <!-- Contact Section -->
   <section class="contact" id="contact">
     <div class="container">
-      <div class="contact-content">
+      <div class="contact-content reveal">
         <h2>Laten we kennismaken</h2>
         <p>Benieuwd wat AI voor uw organisatie kan betekenen? Plan een vrijblijvend gesprek of stuur een bericht.</p>
         <form class="contact-form">
@@ -339,10 +340,11 @@
     <div class="container">
       <div class="footer-left">
         <a href="index.html" class="logo">
-          <div class="logo-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          Trentelman AI
+          <img src="assets/images/logo.png" alt="Trentelman AI Solutions" class="logo-img">
+          <span class="logo-text">
+            <span class="logo-text-main">Trentelman AI</span>
+            <span class="logo-text-sub">Solutions</span>
+          </span>
         </a>
         <p class="footer-tagline">Meer tijd voor mensen, minder tijd aan papier.</p>
       </div>
@@ -353,5 +355,7 @@
     </div>
   </footer>
 
+  <!-- Scroll Reveal Script -->
+  <script src="js/scroll-reveal.js"></script>
 </body>
 </html>

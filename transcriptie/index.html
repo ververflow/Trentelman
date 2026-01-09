@@ -60,11 +60,35 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
       color: var(--color-white);
       font-weight: 600;
       font-size: 18px;
       text-decoration: none;
+    }
+
+    .logo-img {
+      height: 48px;
+      width: auto;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .logo-text-main {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--color-white);
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.55);
+      letter-spacing: 0.01em;
     }
 
     .logo-icon {
@@ -507,10 +531,11 @@
   <header class="header">
     <div class="container">
       <div class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
-        Trentelman AI
+        <img src="../assets/images/logo.png" alt="Trentelman AI Solutions" class="logo-img">
+        <span class="logo-text">
+          <span class="logo-text-main">Trentelman AI</span>
+          <span class="logo-text-sub">Solutions</span>
+        </span>
       </div>
     </div>
   </header>
@@ -519,7 +544,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero-grid">
-        <div class="hero-content">
+        <div class="hero-content reveal-left">
           <h1>Uw team verliest <strong>90 uur per jaar</strong> aan uittypen van gesprekken.</h1>
           <p class="hero-pain">
             Elke dag zitten uw medewerkers na werktijd nog verslagen uit te typen. Ondertussen wachten cliënten. En groeit de administratieve achterstand. Dat kan anders.
@@ -530,7 +555,7 @@
           </div>
         </div>
 
-        <div class="form-card">
+        <div class="form-card reveal-right">
           <h2>Vraag een gratis demo aan</h2>
           <p class="subtitle">Zie binnen 30 minuten hoe het werkt</p>
           <form class="form">
@@ -562,7 +587,7 @@
   <section class="case-study">
     <div class="container">
       <div class="case-grid">
-        <div class="case-stats">
+        <div class="case-stats reveal-left reveal-stagger">
           <div class="stat-card">
             <div class="stat-number">4.500</div>
             <div class="stat-label">uur/jaar bespaard</div>
@@ -581,7 +606,7 @@
           </div>
         </div>
 
-        <div class="case-content">
+        <div class="case-content reveal-right">
           <span class="case-label">Bewezen Resultaat</span>
           <h2>Stichting Attenta: van administratielast naar cliënttijd</h2>
           <p>Stichting Attenta ondersteunt mensen in het Sociaal Domein. Met 50 medewerkers die dagelijks gesprekken voeren, was verslaglegging een enorme tijdvreter. Nu niet meer.</p>
@@ -598,12 +623,12 @@
   <!-- De Oplossing -->
   <section class="solution">
     <div class="container">
-      <div class="solution-header">
+      <div class="solution-header reveal">
         <h2>Hoe het werkt</h2>
         <p>Veilige transcriptie die 100% binnen uw eigen Microsoft-omgeving draait.</p>
       </div>
 
-      <div class="solution-grid">
+      <div class="solution-grid reveal-stagger">
         <div class="solution-card">
           <div class="solution-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -633,7 +658,7 @@
 
   <!-- Final CTA -->
   <section class="final-cta">
-    <div class="container">
+    <div class="container reveal">
       <h2>Klaar om 90 uur per medewerker terug te winnen?</h2>
       <p>Plan een gratis demo. Binnen 30 minuten weet u of het past bij uw organisatie.</p>
       <a href="#" class="btn" onclick="document.querySelector('.form-card input').focus(); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
@@ -650,5 +675,7 @@
     </div>
   </footer>
 
+  <!-- Scroll Reveal Script -->
+  <script src="../js/scroll-reveal.js"></script>
 </body>
 </html>

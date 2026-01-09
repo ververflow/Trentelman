@@ -118,6 +118,29 @@
       border-bottom-left-radius: 4px;
     }
 
+    .chat-message {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .chat-message.user {
+      flex-direction: row-reverse;
+    }
+
+    .chat-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .chat-message .chat-bubble {
+      max-width: calc(85% - 48px);
+    }
+
     .chat-bubble.user {
       background: var(--color-accent);
       color: white;
@@ -379,10 +402,11 @@
   <header class="header">
     <div class="container">
       <a href="../index.html" class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
-        Trentelman AI
+        <img src="../assets/images/logo.png" alt="Trentelman AI Solutions" class="logo-img">
+        <span class="logo-text">
+          <span class="logo-text-main">Trentelman AI</span>
+          <span class="logo-text-sub">Solutions</span>
+        </span>
       </a>
       <nav class="nav">
         <a href="../index.html" class="nav-link">Home</a>
@@ -402,7 +426,7 @@
 
   <!-- Hero -->
   <section class="projects-hero">
-    <div class="container">
+    <div class="container reveal">
       <span class="section-label" style="color: rgba(255,255,255,0.5);">Virtuele Medewerkers</span>
       <h1>AI-agenten die <em>echt</em> werk doen</h1>
       <p>Geen domme chatbots. Digitale collega's die zelfstandig taken uitvoeren, van loopbaangesprekken tot lead qualification.</p>
@@ -413,7 +437,7 @@
   <section class="project-showcase">
     <div class="container">
       <div class="showcase-inner">
-        <div class="showcase-visual">
+        <div class="showcase-visual reveal-left">
           <div class="showcase-badge">Live bij 4+ enterprise klanten</div>
           <div class="showcase-mockup navvy">
             <div class="mockup-chat">
@@ -435,12 +459,12 @@
           </div>
         </div>
 
-        <div class="showcase-content">
+        <div class="showcase-content reveal-right">
           <span class="section-label">Project 1</span>
           <h2>Navvy</h2>
           <p class="showcase-tagline">De virtuele loopbaancoach</p>
           <p>Navvy voert zelfstandig loopbaangesprekken met medewerkers. Niet een vragenlijst die je invult, maar een echte coach die doorvraagt, meedenkt en praktische adviezen geeft.</p>
-          <p>Oorspronkelijk gebouwd voor GooiConsult/Navigator, nu actief ingezet bij grote organisaties die serieus werk maken van talentontwikkeling.</p>
+          <p>Gebouwd in opdracht van <a href="https://www.gooiconsult.nl" target="_blank" style="color: var(--color-accent);">GooiConsult</a> / <a href="https://www.nvgtr.eu" target="_blank" style="color: var(--color-accent);">Navigator</a>. Zij zetten Navvy in bij enterprise klanten als Defensie, ABN-AMRO en Rituals. Fun fact: zelfs Capgemini — een van 's werelds grootste software houses — liet Navvy door ons bouwen.</p>
 
           <div class="showcase-features">
             <div class="feature">
@@ -470,7 +494,13 @@
           </div>
 
           <div class="showcase-clients">
-            <div class="clients-label">Actief bij</div>
+            <div class="clients-label">Opdrachtgever</div>
+            <div class="clients-logos">
+              <span class="client-logo">GooiConsult / Navigator</span>
+            </div>
+          </div>
+          <div class="showcase-clients" style="margin-top: 16px; padding-top: 16px; border-top: none;">
+            <div class="clients-label">Ingezet bij</div>
             <div class="clients-logos">
               <span class="client-logo">Defensie</span>
               <span class="client-logo">ABN-AMRO</span>
@@ -487,30 +517,43 @@
   <section class="project-showcase">
     <div class="container">
       <div class="showcase-inner reverse">
-        <div class="showcase-visual">
+        <div class="showcase-visual reveal-right">
           <div class="showcase-badge">Legal Tech</div>
           <div class="showcase-mockup sofia">
             <div class="mockup-chat">
-              <div class="chat-bubble ai">
-                Goedemiddag, u spreekt met Sofia van Legalitas Advocaten. Waarmee kan ik u helpen?
+              <div class="chat-message">
+                <img src="../assets/images/sofia-avatar.png" alt="Sofia" class="chat-avatar">
+                <div class="chat-bubble ai">
+                  Goedemiddag, u spreekt met Sofia van Legalitas Advocaten. Waarmee kan ik u helpen?
+                </div>
               </div>
-              <div class="chat-bubble user">
-                Mijn werkgever wil me ontslaan maar ik ben het daar niet mee eens.
+              <div class="chat-message user">
+                <div class="chat-bubble user">
+                  Mijn werkgever wil me ontslaan maar ik ben het daar niet mee eens.
+                </div>
               </div>
-              <div class="chat-bubble ai">
-                Dat klinkt als een vervelende situatie. Om u goed te kunnen helpen, heb ik wat informatie nodig. Heeft u al een brief ontvangen van uw werkgever? En hoelang bent u in dienst?
+              <div class="chat-message">
+                <img src="../assets/images/sofia-avatar.png" alt="Sofia" class="chat-avatar">
+                <div class="chat-bubble ai">
+                  Dat klinkt als een vervelende situatie. Om u goed te kunnen helpen, heb ik wat informatie nodig. Heeft u al een brief ontvangen?
+                </div>
               </div>
-              <div class="chat-bubble user">
-                Ja, vorige week. Ik werk er 8 jaar.
+              <div class="chat-message user">
+                <div class="chat-bubble user">
+                  Ja, vorige week. Ik werk er 8 jaar.
+                </div>
               </div>
-              <div class="chat-bubble ai">
-                Bij 8 jaar dienstverband heeft u stevige rechten. Ik plan graag een gesprek in met een van onze arbeidsrechtspecialisten. Schikt morgen om 14:00?
+              <div class="chat-message">
+                <img src="../assets/images/sofia-avatar.png" alt="Sofia" class="chat-avatar">
+                <div class="chat-bubble ai">
+                  Bij 8 jaar dienstverband heeft u stevige rechten. Ik plan graag een gesprek in met een specialist. Schikt morgen om 14:00?
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="showcase-content">
+        <div class="showcase-content reveal-left">
           <span class="section-label">Project 2</span>
           <h2>Sofia</h2>
           <p class="showcase-tagline">De intelligente lead qualifier</p>
@@ -558,13 +601,13 @@
   <!-- What Makes Them Different -->
   <section class="info-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-label" style="color: rgba(255,255,255,0.5);">Geen chatbots</span>
         <h2>Wat virtuele medewerkers anders maakt</h2>
         <p>Het verschil tussen een chatbot en een virtuele medewerker? Een medewerker doet daadwerkelijk werk.</p>
       </div>
 
-      <div class="info-grid">
+      <div class="info-grid reveal-stagger">
         <div class="info-card">
           <div class="info-card-icon">&#128172;</div>
           <h3>Echte gesprekken</h3>
@@ -606,7 +649,7 @@
 
   <!-- CTA -->
   <section class="projects-cta" id="contact">
-    <div class="container">
+    <div class="container reveal">
       <h2>Welke taken wilt u automatiseren?</h2>
       <p>Vertel me over uw situatie. Samen kijken we of een virtuele medewerker past, en zo ja, hoe die eruit zou kunnen zien.</p>
       <a href="../index.html#contact" class="btn btn-white btn-large">
@@ -625,10 +668,11 @@
     <div class="container">
       <div class="footer-left">
         <a href="../index.html" class="logo">
-          <div class="logo-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          Trentelman AI
+          <img src="../assets/images/logo.png" alt="Trentelman AI Solutions" class="logo-img">
+          <span class="logo-text">
+            <span class="logo-text-main">Trentelman AI</span>
+            <span class="logo-text-sub">Solutions</span>
+          </span>
         </a>
         <p class="footer-tagline">Meer tijd voor mensen, minder tijd aan papier.</p>
       </div>
@@ -639,5 +683,7 @@
     </div>
   </footer>
 
+  <!-- Scroll Reveal Script -->
+  <script src="../js/scroll-reveal.js"></script>
 </body>
 </html>

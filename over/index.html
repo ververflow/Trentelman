@@ -36,8 +36,10 @@
       position: relative;
     }
 
-    .about-hero-image .image-placeholder {
+    .about-hero-img {
+      width: 100%;
       aspect-ratio: 3/4;
+      object-fit: cover;
       border-radius: 20px;
     }
 
@@ -197,13 +199,18 @@
     .credential-card-icon {
       width: 64px;
       height: 64px;
-      background: var(--color-light);
+      background: linear-gradient(135deg, rgba(10, 37, 64, 0.08) 0%, rgba(74, 144, 217, 0.12) 100%);
       border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 20px;
       font-size: 28px;
+    }
+
+    .credential-card-icon svg {
+      width: 32px;
+      height: 32px;
     }
 
     .credential-card h3 {
@@ -282,27 +289,40 @@
       position: relative;
     }
 
-    .speaker-card {
-      background: linear-gradient(135deg, var(--color-primary) 0%, #1a3a5c 100%);
-      border-radius: 20px;
-      padding: 48px;
+    .speaker-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
-    .speaker-card-quote {
-      font-family: var(--font-serif);
-      font-size: 24px;
-      font-style: italic;
-      color: var(--color-white);
-      line-height: 1.5;
-      margin-bottom: 24px;
+    .speaker-photo {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
     }
 
-    .speaker-card-stats {
+    .speaker-photo.main {
+      aspect-ratio: 16/10;
+    }
+
+    .speaker-gallery-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255,255,255,0.15);
+      gap: 16px;
+    }
+
+    .speaker-gallery-row .speaker-photo {
+      aspect-ratio: 4/3;
+    }
+
+    .speaker-stats-card {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #1a3a5c 100%);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
     }
 
     .speaker-stat {
@@ -401,10 +421,11 @@
   <header class="header">
     <div class="container">
       <a href="../index.html" class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
-        Trentelman AI
+        <img src="../assets/images/logo.png" alt="Trentelman AI Solutions" class="logo-img">
+        <span class="logo-text">
+          <span class="logo-text-main">Trentelman AI</span>
+          <span class="logo-text-sub">Solutions</span>
+        </span>
       </a>
       <nav class="nav">
         <a href="../index.html" class="nav-link">Home</a>
@@ -426,15 +447,15 @@
   <section class="about-hero">
     <div class="container">
       <div class="about-hero-inner">
-        <div class="about-hero-image">
-          <div class="image-placeholder">Foto Patrick<br>komt hier</div>
+        <div class="about-hero-image reveal-left">
+          <img src="../assets/images/patrick-headshot.png" alt="Patrick Trentelman - AI Expert" class="about-hero-img">
           <div class="about-hero-badge">
             <span class="about-hero-badge-number">15+</span>
             <span class="about-hero-badge-label">jaar ervaring</span>
           </div>
         </div>
 
-        <div class="about-hero-content">
+        <div class="about-hero-content reveal-right">
           <span class="section-label" style="color: rgba(255,255,255,0.5);">Over Patrick</span>
           <h1>De meester die <em>techneut</em> werd</h1>
           <p>Ik ben geen standaard IT-consultant. Mijn verhaal begint niet bij technologie, maar voor de klas. Als docent leerde ik complexe dingen begrijpelijk maken. Die skill gebruik ik nog elke dag.</p>
@@ -452,12 +473,12 @@
   <!-- Timeline -->
   <section class="timeline-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-label">Mijn pad</span>
         <h2>Van klas naar code</h2>
       </div>
 
-      <div class="timeline">
+      <div class="timeline reveal-stagger">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-year">2008 - 2015</div>
@@ -492,32 +513,61 @@
   <!-- Credentials -->
   <section class="credentials-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-label">Credentials</span>
         <h2>Achtergrond & erkenning</h2>
       </div>
 
-      <div class="credentials-grid">
+      <div class="credentials-grid reveal-stagger">
         <div class="credential-card">
-          <div class="credential-card-icon">&#127942;</div>
+          <div class="credential-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#4A90D9"/>
+              <path d="M12 5.5L13.9 9.35L18.18 9.96L15.09 12.97L15.8 17.23L12 15.22L8.2 17.23L8.91 12.97L5.82 9.96L10.1 9.35L12 5.5Z" fill="#0A2540"/>
+            </svg>
+          </div>
           <h3>Innovatieprijswinnaar</h3>
           <p>Meerdere awards gewonnen met Space Time Layers voor innovatie in locatietechnologie.</p>
         </div>
 
         <div class="credential-card">
-          <div class="credential-card-icon">&#9729;</div>
+          <div class="credential-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 20C6 20 4 20 4 18V12C4 8.68 6.68 6 10 6H14C17.32 6 20 8.68 20 12V18C20 20 18 20 18 20" stroke="#0A2540" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 6V4" stroke="#0A2540" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="12" cy="13" r="3" fill="#4A90D9"/>
+              <path d="M7 20L8.5 16H15.5L17 20" stroke="#4A90D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <h3>Microsoft Azure Expert</h3>
           <p>Gecertificeerd Azure specialist. Bouw enterprise-grade AI-oplossingen binnen Microsoft ecosystemen.</p>
         </div>
 
         <div class="credential-card">
-          <div class="credential-card-icon">&#128218;</div>
+          <div class="credential-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="4" width="18" height="16" rx="2" stroke="#0A2540" stroke-width="2"/>
+              <path d="M7 8H17" stroke="#4A90D9" stroke-width="2" stroke-linecap="round"/>
+              <path d="M7 12H15" stroke="#4A90D9" stroke-width="2" stroke-linecap="round"/>
+              <path d="M7 16H12" stroke="#4A90D9" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
           <h3>RvT Biblionet Groningen</h3>
           <p>Raad van Toezicht lid. Strategisch adviseur voor digitale transformatie in de publieke sector.</p>
         </div>
 
         <div class="credential-card">
-          <div class="credential-card-icon">&#127891;</div>
+          <div class="credential-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3L20 7V9H4V7L12 3Z" fill="#0A2540"/>
+              <rect x="6" y="11" width="3" height="7" fill="#4A90D9"/>
+              <rect x="10.5" y="11" width="3" height="7" fill="#4A90D9"/>
+              <rect x="15" y="11" width="3" height="7" fill="#4A90D9"/>
+              <path d="M4 20H20" stroke="#0A2540" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="18" cy="5" r="3" fill="#4A90D9"/>
+              <path d="M17 5L18 6L20 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <h3>1000+ Professionals Getraind</h3>
           <p>AI-trainingen verzorgd voor gemeenten, corporates en overheidsinstanties door heel Nederland.</p>
         </div>
@@ -529,7 +579,7 @@
   <section class="speaker-section" id="spreker">
     <div class="container">
       <div class="speaker-inner">
-        <div class="speaker-content">
+        <div class="speaker-content reveal-left">
           <span class="section-label" style="color: rgba(255,255,255,0.5);">Spreker</span>
           <h2>Patrick als spreker</h2>
           <p>Zoekt u een spreker die AI begrijpelijk maakt? Geen technisch jargon, maar concrete voorbeelden. Geen dystopische vergezichten, maar praktische toepassingen die nu werken.</p>
@@ -547,17 +597,20 @@
           </div>
         </div>
 
-        <div class="speaker-visual">
-          <div class="speaker-card">
-            <p class="speaker-card-quote">"Patrick maakt AI begrijpelijk zonder te verzanden in technisch jargon. Precies wat onze bestuurders nodig hadden."</p>
-            <div class="speaker-card-stats">
-              <div class="speaker-stat">
-                <div class="speaker-stat-number">50+</div>
-                <div class="speaker-stat-label">Presentaties</div>
-              </div>
-              <div class="speaker-stat">
-                <div class="speaker-stat-number">1000+</div>
-                <div class="speaker-stat-label">Professionals bereikt</div>
+        <div class="speaker-visual reveal-right">
+          <div class="speaker-gallery">
+            <img src="../assets/images/patrick-speaking.jpg" alt="Patrick presenteert over OpenAI en Microsoft" class="speaker-photo main">
+            <div class="speaker-gallery-row">
+              <img src="../assets/images/patrick-neural-networks.jpg" alt="Patrick legt neural networks uit" class="speaker-photo">
+              <div class="speaker-stats-card">
+                <div class="speaker-stat">
+                  <div class="speaker-stat-number">50+</div>
+                  <div class="speaker-stat-label">Presentaties</div>
+                </div>
+                <div class="speaker-stat">
+                  <div class="speaker-stat-number">1000+</div>
+                  <div class="speaker-stat-label">Professionals bereikt</div>
+                </div>
               </div>
             </div>
           </div>
@@ -568,7 +621,7 @@
 
   <!-- CTA -->
   <section class="about-cta" id="contact">
-    <div class="container">
+    <div class="container reveal">
       <h2>Laten we kennismaken</h2>
       <p>Benieuwd naar samenwerking? Of zoekt u een spreker voor uw event? Neem contact op voor een vrijblijvend gesprek.</p>
       <div class="cta-buttons">
@@ -592,10 +645,11 @@
     <div class="container">
       <div class="footer-left">
         <a href="../index.html" class="logo">
-          <div class="logo-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          Trentelman AI
+          <img src="../assets/images/logo.png" alt="Trentelman AI Solutions" class="logo-img">
+          <span class="logo-text">
+            <span class="logo-text-main">Trentelman AI</span>
+            <span class="logo-text-sub">Solutions</span>
+          </span>
         </a>
         <p class="footer-tagline">Meer tijd voor mensen, minder tijd aan papier.</p>
       </div>
@@ -606,5 +660,7 @@
     </div>
   </footer>
 
+  <!-- Scroll Reveal Script -->
+  <script src="../js/scroll-reveal.js"></script>
 </body>
 </html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bespaar 4.500 uur per jaar op verslaglegging | Veilige Transcriptie</title>
+  <meta name="description" content="Automatische transcriptie die 100% binnen uw eigen Microsoft-omgeving draait. Bewezen bij Stichting Attenta: 4.500 uur/jaar bespaard. Vraag een gratis demo aan.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bespaar 4.500 uur per jaar op verslaglegging">
+  <meta property="og:description" content="Veilige transcriptie binnen uw eigen Microsoft-omgeving. AVG-compliant. Bewezen resultaat.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --color-primary: #0A2540;
+      --color-accent: #4A90D9;
+      --color-white: #ffffff;
+      --color-light: #f8f9fb;
+      --color-dark: #0A2540;
+      --color-muted: #5c6970;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-dark);
+      background: var(--color-white);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== MINIMAL HEADER ===== */
+    .header {
+      padding: 20px 0;
+      background: var(--color-dark);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--color-white);
+      font-weight: 600;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--color-accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+
+    /* ===== HERO - DE PIJN ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--color-dark) 0%, #1a3a5c 100%);
+      padding: 80px 0 100px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: 44px;
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--color-white);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 strong {
+      color: var(--color-accent);
+      font-weight: 400;
+    }
+
+    .hero-pain {
+      color: rgba(255,255,255,0.8);
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .hero-proof {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 12px 20px;
+      border-radius: 8px;
+    }
+
+    .hero-proof-badge {
+      background: var(--color-accent);
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .hero-proof-text {
+      color: rgba(255,255,255,0.9);
+      font-size: 14px;
+    }
+
+    /* ===== FORM CARD ===== */
+    .form-card {
+      background: var(--color-white);
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    }
+
+    .form-card h2 {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--color-dark);
+      margin-bottom: 6px;
+    }
+
+    .form-card .subtitle {
+      color: var(--color-muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .form input,
+    .form select {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--color-light);
+      border: 2px solid transparent;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--color-dark);
+      transition: border-color 0.2s;
+    }
+
+    .form input:focus,
+    .form select:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      background: white;
+    }
+
+    .form input::placeholder {
+      color: var(--color-muted);
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 16px 24px;
+      background: var(--color-accent);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background: #3a7bc8;
+      transform: translateY(-1px);
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .form-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 16px;
+      color: var(--color-muted);
+      font-size: 12px;
+    }
+
+    .form-trust svg {
+      width: 14px;
+      height: 14px;
+      color: #22c55e;
+    }
+
+    /* ===== CASE STUDY - HET BEWIJS ===== */
+    .case-study {
+      padding: 100px 0;
+      background: var(--color-light);
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .case-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .stat-card {
+      background: var(--color-white);
+      border-radius: 12px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .stat-number {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--color-muted);
+    }
+
+    .case-label {
+      display: inline-block;
+      background: var(--color-accent);
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .case-content h2 {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--color-dark);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .case-content > p {
+      color: var(--color-muted);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .case-quote {
+      background: var(--color-white);
+      border-left: 4px solid var(--color-accent);
+      padding: 24px 28px;
+      border-radius: 0 12px 12px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .case-quote p {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-style: italic;
+      color: var(--color-dark);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .case-quote cite {
+      font-size: 13px;
+      color: var(--color-muted);
+      font-style: normal;
+    }
+
+    /* ===== DE OPLOSSING ===== */
+    .solution {
+      padding: 100px 0;
+      background: var(--color-white);
+    }
+
+    .solution-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .solution-header h2 {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--color-dark);
+      margin-bottom: 16px;
+    }
+
+    .solution-header p {
+      color: var(--color-muted);
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .solution-card {
+      text-align: center;
+      padding: 32px 24px;
+    }
+
+    .solution-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--color-light);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .solution-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--color-accent);
+    }
+
+    .solution-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-dark);
+      margin-bottom: 10px;
+    }
+
+    .solution-card p {
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      background: var(--color-dark);
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--color-white);
+      margin-bottom: 16px;
+    }
+
+    .final-cta p {
+      color: rgba(255,255,255,0.7);
+      font-size: 18px;
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .final-cta .btn {
+      display: inline-flex;
+      width: auto;
+      padding: 18px 32px;
+      font-size: 17px;
+    }
+
+    /* ===== MINIMAL FOOTER ===== */
+    .footer {
+      background: var(--color-dark);
+      padding: 24px 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+    }
+
+    .footer p {
+      color: rgba(255,255,255,0.5);
+      font-size: 13px;
+    }
+
+    .footer a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-card {
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 60px 0 80px;
+      }
+
+      .case-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .case-stats {
+        order: 1;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .solution-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .case-content h2,
+      .solution-header h2,
+      .final-cta h2 {
+        font-size: 28px;
+      }
+
+      .stat-number {
+        font-size: 32px;
+      }
+
+      .case-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header - Logo only, no link back -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        Trentelman AI
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero: De Pijn + CTA -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1>Uw team verliest <strong>90 uur per jaar</strong> aan uittypen van gesprekken.</h1>
+          <p class="hero-pain">
+            Elke dag zitten uw medewerkers na werktijd nog verslagen uit te typen. Ondertussen wachten cliënten. En groeit de administratieve achterstand. Dat kan anders.
+          </p>
+          <div class="hero-proof">
+            <span class="hero-proof-badge">Case Study</span>
+            <span class="hero-proof-text">Stichting Attenta bespaart 4.500 uur/jaar</span>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h2>Vraag een gratis demo aan</h2>
+          <p class="subtitle">Zie binnen 30 minuten hoe het werkt</p>
+          <form class="form">
+            <input type="text" placeholder="Uw naam" required>
+            <input type="email" placeholder="Zakelijk e-mailadres" required>
+            <input type="text" placeholder="Organisatie">
+            <select required>
+              <option value="">Hoeveel medewerkers typen verslagen?</option>
+              <option value="1-10">1-10 medewerkers</option>
+              <option value="11-50">11-50 medewerkers</option>
+              <option value="51-200">51-200 medewerkers</option>
+              <option value="200+">200+ medewerkers</option>
+            </select>
+            <button type="submit" class="btn">
+              Vraag demo aan
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+          <div class="form-trust">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>100% AVG-compliant. Geen spam, beloofd.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study: Het Bewijs -->
+  <section class="case-study">
+    <div class="container">
+      <div class="case-grid">
+        <div class="case-stats">
+          <div class="stat-card">
+            <div class="stat-number">4.500</div>
+            <div class="stat-label">uur/jaar bespaard</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50</div>
+            <div class="stat-label">medewerkers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">90</div>
+            <div class="stat-label">uur/persoon/jaar</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">AVG-compliant</div>
+          </div>
+        </div>
+
+        <div class="case-content">
+          <span class="case-label">Bewezen Resultaat</span>
+          <h2>Stichting Attenta: van administratielast naar cliënttijd</h2>
+          <p>Stichting Attenta ondersteunt mensen in het Sociaal Domein. Met 50 medewerkers die dagelijks gesprekken voeren, was verslaglegging een enorme tijdvreter. Nu niet meer.</p>
+
+          <div class="case-quote">
+            <p>"Onze medewerkers hebben eindelijk weer tijd voor een extra kop koffie met hun cliënten."</p>
+            <cite>— Stichting Attenta, Sociaal Domein</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- De Oplossing -->
+  <section class="solution">
+    <div class="container">
+      <div class="solution-header">
+        <h2>Hoe het werkt</h2>
+        <p>Veilige transcriptie die 100% binnen uw eigen Microsoft-omgeving draait.</p>
+      </div>
+
+      <div class="solution-grid">
+        <div class="solution-card">
+          <div class="solution-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>100% in uw eigen omgeving</h3>
+          <p>Draait binnen uw Microsoft Azure tenant. Geen data naar externe servers. Geen Amerika. Zero Data Retention.</p>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          </div>
+          <h3>Direct een afgerond verslag</h3>
+          <p>Geen lap tekst die u nog moet opmaken. Direct een gestructureerd document in uw eigen format en huisstijl.</p>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+          </div>
+          <h3>Werkt met uw systemen</h3>
+          <p>Naadloos geïntegreerd met Microsoft 365, SharePoint en uw bestaande documentworkflows. Geen nieuw systeem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Klaar om 90 uur per medewerker terug te winnen?</h2>
+      <p>Plan een gratis demo. Binnen 30 minuten weet u of het past bij uw organisatie.</p>
+      <a href="#" class="btn" onclick="document.querySelector('.form-card input').focus(); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+        Vraag demo aan
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Minimal Footer - Contact only, no site links -->
+  <footer class="footer">
+    <div class="container">
+      <p><a href="tel:+31641266456">06-41 266 456</a> · <a href="mailto:patrick@trentelman.com">patrick@trentelman.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

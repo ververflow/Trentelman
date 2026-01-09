@@ -1,0 +1,28 @@
+# Trentelman AI Solutions
+
+> AI-oplossingen die werken. Van veilige transcriptie tot virtuele medewerkers.
+
+## About
+Patrick Trentelman bouwt praktische AI-tools voor gemeenten, zorg en zakelijke dienstverlening.
+
+## Key Pages
+- Home
+- Transcriptie
+- Projecten
+- Over Patrick
+
+## Products/Services
+- Veilige Transcriptie
+- Virtuele Medewerkers
+- AI Officer en Training
+
+## Contact
+- Website: https://trentelman.com
+- Email: patrick@trentelman.com
+
+## Expertise Areas
+- AI
+- Microsoft Azure
+- Transcriptie
+- AVG-compliance
+- Virtuele Medewerkers

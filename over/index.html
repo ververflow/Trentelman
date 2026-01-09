@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Over Patrick Trentelman - AI Officer & Spreker | Trentelman AI</title>
+  <meta name="description" content="Patrick Trentelman: van docent tot AI-pionier. Innovatieprijswinnaar, AI Officer, en bouwer van virtuele medewerkers. Beschikbaar als spreker.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Over Patrick Trentelman - AI Officer & Spreker">
+  <meta property="og:description" content="Van docent tot AI-pionier. Innovatieprijswinnaar en bouwer van virtuele medewerkers.">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="nl_NL">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    /* About Page Specific Styles */
+    .about-hero {
+      background: var(--color-dark);
+      padding: 80px 0 100px;
+    }
+
+    .about-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-hero-image {
+      position: relative;
+    }
+
+    .about-hero-image .image-placeholder {
+      aspect-ratio: 3/4;
+      border-radius: 20px;
+    }
+
+    .about-hero-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--color-accent);
+      color: white;
+      padding: 20px 28px;
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgba(74, 144, 217, 0.4);
+    }
+
+    .about-hero-badge-number {
+      font-family: var(--font-sans);
+      font-size: 32px;
+      font-weight: 700;
+      display: block;
+    }
+
+    .about-hero-badge-label {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .about-hero-content h1 {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 400;
+      color: var(--color-white);
+      margin-bottom: 24px;
+      line-height: 1.15;
+    }
+
+    .about-hero-content h1 em {
+      font-style: italic;
+      color: var(--color-accent);
+    }
+
+    .about-hero-content > p {
+      color: rgba(255,255,255,0.75);
+      font-family: var(--font-sans);
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .about-hero-content > p strong {
+      color: var(--color-white);
+    }
+
+    .about-hero-quote {
+      margin-top: 32px;
+      padding: 24px;
+      background: rgba(255,255,255,0.05);
+      border-left: 3px solid var(--color-accent);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .about-hero-quote p {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-style: italic;
+      color: var(--color-white);
+      line-height: 1.5;
+    }
+
+    /* Timeline */
+    .timeline-section {
+      background: var(--color-white);
+      padding: 100px 0;
+    }
+
+    .timeline {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--color-light);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 72px;
+      padding-bottom: 48px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 12px;
+      top: 4px;
+      width: 26px;
+      height: 26px;
+      background: var(--color-accent);
+      border-radius: 50%;
+      border: 4px solid var(--color-white);
+      box-shadow: 0 0 0 4px var(--color-light);
+    }
+
+    .timeline-year {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+
+    .timeline-title {
+      font-family: var(--font-sans);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-dark);
+      margin-bottom: 8px;
+    }
+
+    .timeline-description {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      color: var(--color-muted);
+      line-height: 1.7;
+    }
+
+    /* Credentials */
+    .credentials-section {
+      background: var(--color-light);
+      padding: 100px 0;
+    }
+
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .credential-card {
+      background: var(--color-white);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+
+    .credential-card-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--color-light);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 28px;
+    }
+
+    .credential-card h3 {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-dark);
+      margin-bottom: 8px;
+    }
+
+    .credential-card p {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--color-muted);
+      line-height: 1.5;
+    }
+
+    /* Speaker Section */
+    .speaker-section {
+      background: var(--color-dark);
+      padding: 100px 0;
+    }
+
+    .speaker-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .speaker-content h2 {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 400;
+      color: var(--color-white);
+      margin-bottom: 24px;
+    }
+
+    .speaker-content > p {
+      color: rgba(255,255,255,0.75);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .speaker-topics {
+      margin-top: 32px;
+    }
+
+    .speaker-topics h4 {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-white);
+      margin-bottom: 16px;
+    }
+
+    .topic-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .topic-tag {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 10px 18px;
+      border-radius: 24px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--color-white);
+    }
+
+    .speaker-visual {
+      position: relative;
+    }
+
+    .speaker-card {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #1a3a5c 100%);
+      border-radius: 20px;
+      padding: 48px;
+    }
+
+    .speaker-card-quote {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-style: italic;
+      color: var(--color-white);
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .speaker-card-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .speaker-stat {
+      text-align: center;
+    }
+
+    .speaker-stat-number {
+      font-family: var(--font-sans);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--color-white);
+    }
+
+    .speaker-stat-label {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* CTA */
+    .about-cta {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #1a3a5c 100%);
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .about-cta h2 {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 400;
+      color: var(--color-white);
+      margin-bottom: 16px;
+    }
+
+    .about-cta p {
+      color: rgba(255,255,255,0.7);
+      font-family: var(--font-sans);
+      font-size: 18px;
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .about-hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .about-hero-image {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .credentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .speaker-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-hero-content h1 {
+        font-size: 36px;
+      }
+
+      .credentials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .speaker-card-stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        Trentelman AI
+      </a>
+      <nav class="nav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../transcriptie/index.html" class="nav-link">Transcriptie</a>
+        <a href="../projecten/index.html" class="nav-link">Projecten</a>
+        <a href="#contact" class="btn btn-primary">
+          Neem contact op
+          <span class="btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero-inner">
+        <div class="about-hero-image">
+          <div class="image-placeholder">Foto Patrick<br>komt hier</div>
+          <div class="about-hero-badge">
+            <span class="about-hero-badge-number">15+</span>
+            <span class="about-hero-badge-label">jaar ervaring</span>
+          </div>
+        </div>
+
+        <div class="about-hero-content">
+          <span class="section-label" style="color: rgba(255,255,255,0.5);">Over Patrick</span>
+          <h1>De meester die <em>techneut</em> werd</h1>
+          <p>Ik ben geen standaard IT-consultant. Mijn verhaal begint niet bij technologie, maar voor de klas. Als docent leerde ik complexe dingen begrijpelijk maken. Die skill gebruik ik nog elke dag.</p>
+          <p>Na het onderwijs startte ik <strong>Space Time Layers</strong>, een startup waarmee ik innovatieprijzen won. Toen kwam AI. En ik zag direct: dit gaat alles veranderen. Niet in de toekomst, maar nu.</p>
+          <p>Tegenwoordig werk ik als <strong>AI Officer</strong> voor grote consultancybedrijven en de overheid. Ik bouw "virtuele medewerkers" zodat echte medewerkers weer tijd hebben voor menselijk contact.</p>
+
+          <div class="about-hero-quote">
+            <p>"AI vervangt geen mensen. AI bevrijdt mensen van saai administratief werk."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Mijn pad</span>
+        <h2>Van klas naar code</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2008 - 2015</div>
+          <div class="timeline-title">Docent</div>
+          <div class="timeline-description">Jaren voor de klas, waar ik leerde om complexe onderwerpen begrijpelijk te maken. De basis voor alles wat zou komen.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2015 - 2020</div>
+          <div class="timeline-title">Space Time Layers</div>
+          <div class="timeline-description">Mijn eerste startup. Innovatieve locatietechnologie. Won meerdere innovatieprijzen. Leerde ondernemen, bouwen, en doorpakken.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2020 - 2023</div>
+          <div class="timeline-title">AI Pioneer</div>
+          <div class="timeline-description">Diepe duik in AI en machine learning. Microsoft Azure gecertificeerd. Begon met bouwen van eerste AI-oplossingen voor klanten.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2023 - Nu</div>
+          <div class="timeline-title">AI Officer & Solution Builder</div>
+          <div class="timeline-description">AI Officer voor grote consultancybedrijven en overheid. Bouw virtuele medewerkers. Train teams. Spreek op conferenties. De menselijke maat in AI.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials -->
+  <section class="credentials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Credentials</span>
+        <h2>Achtergrond & erkenning</h2>
+      </div>
+
+      <div class="credentials-grid">
+        <div class="credential-card">
+          <div class="credential-card-icon">&#127942;</div>
+          <h3>Innovatieprijswinnaar</h3>
+          <p>Meerdere awards gewonnen met Space Time Layers voor innovatie in locatietechnologie.</p>
+        </div>
+
+        <div class="credential-card">
+          <div class="credential-card-icon">&#9729;</div>
+          <h3>Microsoft Azure Expert</h3>
+          <p>Gecertificeerd Azure specialist. Bouw enterprise-grade AI-oplossingen binnen Microsoft ecosystemen.</p>
+        </div>
+
+        <div class="credential-card">
+          <div class="credential-card-icon">&#128218;</div>
+          <h3>RvT Biblionet Groningen</h3>
+          <p>Raad van Toezicht lid. Strategisch adviseur voor digitale transformatie in de publieke sector.</p>
+        </div>
+
+        <div class="credential-card">
+          <div class="credential-card-icon">&#127891;</div>
+          <h3>1000+ Professionals Getraind</h3>
+          <p>AI-trainingen verzorgd voor gemeenten, corporates en overheidsinstanties door heel Nederland.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speaker -->
+  <section class="speaker-section" id="spreker">
+    <div class="container">
+      <div class="speaker-inner">
+        <div class="speaker-content">
+          <span class="section-label" style="color: rgba(255,255,255,0.5);">Spreker</span>
+          <h2>Patrick als spreker</h2>
+          <p>Zoekt u een spreker die AI begrijpelijk maakt? Geen technisch jargon, maar concrete voorbeelden. Geen dystopische vergezichten, maar praktische toepassingen die nu werken.</p>
+          <p>Ik spreek regelmatig op conferenties, management bijeenkomsten en trainingen. Met een achtergrond als docent weet ik hoe je complexe materie toegankelijk maakt voor elk publiek.</p>
+
+          <div class="speaker-topics">
+            <h4>Populaire onderwerpen</h4>
+            <div class="topic-list">
+              <span class="topic-tag">AI voor bestuurders</span>
+              <span class="topic-tag">Praktische AI-toepassingen</span>
+              <span class="topic-tag">AVG & AI</span>
+              <span class="topic-tag">De menselijke maat</span>
+              <span class="topic-tag">Virtuele medewerkers</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="speaker-visual">
+          <div class="speaker-card">
+            <p class="speaker-card-quote">"Patrick maakt AI begrijpelijk zonder te verzanden in technisch jargon. Precies wat onze bestuurders nodig hadden."</p>
+            <div class="speaker-card-stats">
+              <div class="speaker-stat">
+                <div class="speaker-stat-number">50+</div>
+                <div class="speaker-stat-label">Presentaties</div>
+              </div>
+              <div class="speaker-stat">
+                <div class="speaker-stat-number">1000+</div>
+                <div class="speaker-stat-label">Professionals bereikt</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="about-cta" id="contact">
+    <div class="container">
+      <h2>Laten we kennismaken</h2>
+      <p>Benieuwd naar samenwerking? Of zoekt u een spreker voor uw event? Neem contact op voor een vrijblijvend gesprek.</p>
+      <div class="cta-buttons">
+        <a href="../index.html#contact" class="btn btn-white btn-large">
+          Plan een gesprek
+          <span class="btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+        </a>
+        <a href="https://linkedin.com/in/patrick-trentelman" target="_blank" class="btn btn-outline btn-large" style="border-color: rgba(255,255,255,0.3); color: white;">
+          LinkedIn profiel
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-left">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          Trentelman AI
+        </a>
+        <p class="footer-tagline">Meer tijd voor mensen, minder tijd aan papier.</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:patrick@trentelman.com" class="footer-link">patrick@trentelman.com</a>
+        <a href="tel:+31641266456" class="footer-link">06-41 266 456</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

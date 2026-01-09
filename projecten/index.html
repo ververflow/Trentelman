@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projecten - Virtuele Medewerkers | Trentelman AI</title>
+  <meta name="description" content="Ontdek Navvy en Sofia - AI-agenten die echt werk doen. Van loopbaancoaching bij Defensie tot lead qualification voor advocatenkantoren.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Projecten - Virtuele Medewerkers">
+  <meta property="og:description" content="AI-agenten die echt werk doen. Navvy voor loopbaancoaching, Sofia voor lead qualification.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    /* Projects Page Specific Styles */
+    .projects-hero {
+      background: var(--color-dark);
+      padding: 80px 0 100px;
+      text-align: center;
+    }
+
+    .projects-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 52px;
+      font-weight: 400;
+      color: var(--color-white);
+      margin-bottom: 20px;
+    }
+
+    .projects-hero h1 em {
+      font-style: italic;
+      color: var(--color-accent);
+    }
+
+    .projects-hero p {
+      color: rgba(255,255,255,0.7);
+      font-family: var(--font-sans);
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Project Showcase */
+    .project-showcase {
+      padding: 100px 0;
+    }
+
+    .project-showcase:nth-child(odd) {
+      background: var(--color-white);
+    }
+
+    .project-showcase:nth-child(even) {
+      background: var(--color-light);
+    }
+
+    .showcase-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .showcase-inner.reverse {
+      direction: rtl;
+    }
+
+    .showcase-inner.reverse > * {
+      direction: ltr;
+    }
+
+    .showcase-visual {
+      position: relative;
+    }
+
+    .showcase-mockup {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #1a3a5c 100%);
+      border-radius: 20px;
+      padding: 40px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .showcase-mockup.navvy {
+      background: linear-gradient(135deg, #0A2540 0%, #2d5a87 100%);
+    }
+
+    .showcase-mockup.sofia {
+      background: linear-gradient(135deg, #1a3a5c 0%, #4A90D9 100%);
+    }
+
+    .mockup-chat {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .chat-bubble {
+      max-width: 85%;
+      padding: 16px 20px;
+      border-radius: 16px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .chat-bubble.ai {
+      background: rgba(255,255,255,0.95);
+      color: var(--color-dark);
+      border-bottom-left-radius: 4px;
+    }
+
+    .chat-bubble.user {
+      background: var(--color-accent);
+      color: white;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+
+    .chat-typing {
+      display: flex;
+      gap: 4px;
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 16px;
+      width: fit-content;
+    }
+
+    .chat-typing span {
+      width: 8px;
+      height: 8px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      animation: typing 1.4s infinite ease-in-out;
+    }
+
+    .chat-typing span:nth-child(2) { animation-delay: 0.2s; }
+    .chat-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes typing {
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.6; }
+      30% { transform: translateY(-4px); opacity: 1; }
+    }
+
+    .showcase-badge {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background: var(--color-accent);
+      color: white;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(74, 144, 217, 0.4);
+    }
+
+    .showcase-content .section-label {
+      margin-bottom: 12px;
+    }
+
+    .showcase-content h2 {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 400;
+      color: var(--color-dark);
+      margin-bottom: 16px;
+    }
+
+    .showcase-tagline {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      color: var(--color-accent);
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .showcase-content > p {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      color: var(--color-muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .showcase-features {
+      margin: 32px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .feature-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--color-accent);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .feature-icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: white;
+    }
+
+    .feature span {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--color-dark);
+      line-height: 1.4;
+    }
+
+    .showcase-clients {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .clients-label {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: var(--color-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .clients-logos {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .client-logo {
+      background: var(--color-light);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-dark);
+    }
+
+    /* Info Cards */
+    .info-section {
+      background: var(--color-dark);
+      padding: 100px 0;
+    }
+
+    .info-section .section-header h2 {
+      color: var(--color-white);
+    }
+
+    .info-section .section-header p {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .info-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .info-card-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--color-accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .info-card h3 {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-white);
+      margin-bottom: 12px;
+    }
+
+    .info-card p {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+
+    /* CTA Section */
+    .projects-cta {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #1a3a5c 100%);
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .projects-cta h2 {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 400;
+      color: var(--color-white);
+      margin-bottom: 16px;
+    }
+
+    .projects-cta p {
+      color: rgba(255,255,255,0.7);
+      font-family: var(--font-sans);
+      font-size: 18px;
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .showcase-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .showcase-inner.reverse {
+        direction: ltr;
+      }
+
+      .showcase-visual {
+        order: -1;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .projects-hero h1 {
+        font-size: 36px;
+      }
+
+      .showcase-content h2 {
+        font-size: 32px;
+      }
+
+      .showcase-features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        Trentelman AI
+      </a>
+      <nav class="nav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../transcriptie/index.html" class="nav-link">Transcriptie</a>
+        <a href="../over/index.html" class="nav-link">Over Patrick</a>
+        <a href="#contact" class="btn btn-primary">
+          Plan een gesprek
+          <span class="btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="projects-hero">
+    <div class="container">
+      <span class="section-label" style="color: rgba(255,255,255,0.5);">Virtuele Medewerkers</span>
+      <h1>AI-agenten die <em>echt</em> werk doen</h1>
+      <p>Geen domme chatbots. Digitale collega's die zelfstandig taken uitvoeren, van loopbaangesprekken tot lead qualification.</p>
+    </div>
+  </section>
+
+  <!-- Navvy Showcase -->
+  <section class="project-showcase">
+    <div class="container">
+      <div class="showcase-inner">
+        <div class="showcase-visual">
+          <div class="showcase-badge">Live bij 4+ enterprise klanten</div>
+          <div class="showcase-mockup navvy">
+            <div class="mockup-chat">
+              <div class="chat-bubble ai">
+                Hoi! Ik ben Navvy, je virtuele loopbaancoach. Ik help je graag om na te denken over je volgende carrièrestap. Wat houdt je bezig op dit moment?
+              </div>
+              <div class="chat-bubble user">
+                Ik werk al 5 jaar in dezelfde functie en vraag me af of ik niet iets anders moet gaan doen.
+              </div>
+              <div class="chat-bubble ai">
+                Dat is een belangrijke vraag. Laten we samen kijken wat er speelt. Wat geeft je momenteel energie in je werk? En wat kost juist energie?
+              </div>
+              <div class="chat-typing">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-content">
+          <span class="section-label">Project 1</span>
+          <h2>Navvy</h2>
+          <p class="showcase-tagline">De virtuele loopbaancoach</p>
+          <p>Navvy voert zelfstandig loopbaangesprekken met medewerkers. Niet een vragenlijst die je invult, maar een echte coach die doorvraagt, meedenkt en praktische adviezen geeft.</p>
+          <p>Oorspronkelijk gebouwd voor GooiConsult/Navigator, nu actief ingezet bij grote organisaties die serieus werk maken van talentontwikkeling.</p>
+
+          <div class="showcase-features">
+            <div class="feature">
+              <span class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <span>24/7 beschikbaar voor medewerkers</span>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <span>Structurele gespreksverslagen</span>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <span>Doorvragen en meedenken</span>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <span>Praktische actieplannen</span>
+            </div>
+          </div>
+
+          <div class="showcase-clients">
+            <div class="clients-label">Actief bij</div>
+            <div class="clients-logos">
+              <span class="client-logo">Defensie</span>
+              <span class="client-logo">ABN-AMRO</span>
+              <span class="client-logo">Rituals</span>
+              <span class="client-logo">Capgemini</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sofia Showcase -->
+  <section class="project-showcase">
+    <div class="container">
+      <div class="showcase-inner reverse">
+        <div class="showcase-visual">
+          <div class="showcase-badge">Legal Tech</div>
+          <div class="showcase-mockup sofia">
+            <div class="mockup-chat">
+              <div class="chat-bubble ai">
+                Goedemiddag, u spreekt met Sofia van Legalitas Advocaten. Waarmee kan ik u helpen?
+              </div>
+              <div class="chat-bubble user">
+                Mijn werkgever wil me ontslaan maar ik ben het daar niet mee eens.
+              </div>
+              <div class="chat-bubble ai">
+                Dat klinkt als een vervelende situatie. Om u goed te kunnen helpen, heb ik wat informatie nodig. Heeft u al een brief ontvangen van uw werkgever? En hoelang bent u in dienst?
+              </div>
+              <div class="chat-bubble user">
+                Ja, vorige week. Ik werk er 8 jaar.
+              </div>
+              <div class="chat-bubble ai">
+                Bij 8 jaar dienstverband heeft u stevige rechten. Ik plan graag een gesprek in met een van onze arbeidsrechtspecialisten. Schikt morgen om 14:00?
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-content">
+          <span class="section-label">Project 2</span>
+          <h2>Sofia</h2>
+          <p class="showcase-tagline">De intelligente lead qualifier</p>
+          <p>Sofia doet de eerste intake voor advocatenkantoren. Ze checkt of een zaak kansrijk is, beoordeelt de urgentie, en plant direct een afspraak met de juiste specialist.</p>
+          <p>Gebouwd voor Legalitas Advocaten. Sofia filtert de juiste zaken voordat een advocaat tijd investeert, en zorgt dat potentiële cliënten direct geholpen worden - ook buiten kantooruren.</p>
+
+          <div class="showcase-features">
+            <div class="feature">
+              <span class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <span>Intake & lead qualification</span>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <span>Urgentie-beoordeling</span>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <span>HubSpot CRM-integratie</span>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <span>Automatisch afspraken plannen</span>
+            </div>
+          </div>
+
+          <div class="showcase-clients">
+            <div class="clients-label">Gebouwd voor</div>
+            <div class="clients-logos">
+              <span class="client-logo">Legalitas Advocaten</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Makes Them Different -->
+  <section class="info-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" style="color: rgba(255,255,255,0.5);">Geen chatbots</span>
+        <h2>Wat virtuele medewerkers anders maakt</h2>
+        <p>Het verschil tussen een chatbot en een virtuele medewerker? Een medewerker doet daadwerkelijk werk.</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-icon">&#128172;</div>
+          <h3>Echte gesprekken</h3>
+          <p>Geen menu met opties. Een virtuele medewerker voert een echt gesprek, vraagt door, en past zich aan de situatie aan.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">&#9881;</div>
+          <h3>Acties uitvoeren</h3>
+          <p>Niet alleen antwoorden geven, maar ook acties uitvoeren: afspraken plannen, CRM bijwerken, documenten genereren.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">&#128279;</div>
+          <h3>Systeemintegratie</h3>
+          <p>Direct gekoppeld aan uw bestaande systemen: CRM, calendar, documentbeheer. Geen eiland, maar onderdeel van uw workflow.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">&#128218;</div>
+          <h3>Lerende systemen</h3>
+          <p>Virtuele medewerkers leren van interacties en worden steeds beter in hun taak. Binnen uw veilige omgeving.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">&#127919;</div>
+          <h3>24/7 beschikbaar</h3>
+          <p>Altijd paraat. Geen wachttijden. Potentiële klanten of medewerkers worden direct geholpen, ook 's nachts of in het weekend.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">&#128274;</div>
+          <h3>Veilig & compliant</h3>
+          <p>Net als al mijn oplossingen: 100% binnen uw eigen omgeving. AVG-compliant. Geen data naar externe servers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="projects-cta" id="contact">
+    <div class="container">
+      <h2>Welke taken wilt u automatiseren?</h2>
+      <p>Vertel me over uw situatie. Samen kijken we of een virtuele medewerker past, en zo ja, hoe die eruit zou kunnen zien.</p>
+      <a href="../index.html#contact" class="btn btn-white btn-large">
+        Plan een gesprek
+        <span class="btn-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-left">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          Trentelman AI
+        </a>
+        <p class="footer-tagline">Meer tijd voor mensen, minder tijd aan papier.</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:patrick@trentelman.com" class="footer-link">patrick@trentelman.com</a>
+        <a href="tel:+31641266456" class="footer-link">06-41 266 456</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

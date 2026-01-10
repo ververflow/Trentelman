@@ -87,18 +87,7 @@ We hebben uw KvK en BTW nummer nodig voor de privacy policy en footer.
 
 ## 🟡 Belangrijk (sterk aanbevolen)
 
-### 7. Social media afbeelding
-
-We maken een afbeelding die getoond wordt als de website gedeeld wordt op LinkedIn, Facebook, WhatsApp etc.
-
-**Vraag:** Hoe wilt u dit?
-
-- [ ] Maak op basis van logo/design (wij regelen)
-- [ ] Ik lever een afbeelding aan (1200x630px)
-- [ ] Anders, namelijk: _______________
-
----
-### 8. Favicon nodig
+### 7. Favicon nodig
 
 We maken een favicon (het kleine icoontje in browser tabs).
 
@@ -109,7 +98,7 @@ We maken een favicon (het kleine icoontje in browser tabs).
 - [ ] Anders, namelijk: _______________
 
 ---
-### 9. 9 testimonial(s)
+### 8. 9 testimonial(s)
 
 We zien testimonials op de website. Hiervoor is toestemming nodig.
 
@@ -120,7 +109,7 @@ We zien testimonials op de website. Hiervoor is toestemming nodig.
 - [ ] Anders, namelijk: _______________
 
 ---
-### 10. Analytics
+### 9. Analytics
 
 We kunnen bezoekersstatistieken instellen zodat u kunt zien hoeveel bezoekers u krijgt. Bij analytics plaatsen wij automatisch een cookie banner (wettelijk verplicht).
 
@@ -133,7 +122,7 @@ We kunnen bezoekersstatistieken instellen zodat u kunt zien hoeveel bezoekers u 
 - [ ] Anders, namelijk: _______________
 
 ---
-### 11. Contactgegevens check
+### 10. Contactgegevens check
 
 Graag uw contactgegevens controleren zodat we zeker weten dat alles klopt.
 
@@ -145,7 +134,7 @@ Graag uw contactgegevens controleren zodat we zeker weten dat alles klopt.
 - [ ] Anders, namelijk: _______________
 
 ---
-### 12. Logo bestand
+### 11. Logo bestand
 
 Voor de beste kwaliteit hebben we graag uw logo in hoge resolutie of vector formaat.
 
@@ -157,7 +146,7 @@ Voor de beste kwaliteit hebben we graag uw logo in hoge resolutie of vector form
 - [ ] Anders, namelijk: _______________
 
 ---
-### 13. Prijzen op website?
+### 12. Prijzen op website?
 
 Veel bezoekers willen prijzen zien. We kunnen dit toevoegen als u wilt.
 
@@ -170,7 +159,7 @@ Veel bezoekers willen prijzen zien. We kunnen dit toevoegen als u wilt.
 - [ ] Anders, namelijk: _______________
 
 ---
-### 14. Foto materiaal
+### 13. Foto materiaal
 
 We gebruiken momenteel een headshot voor de header. Zijn er alternatieven of aanvullende foto's gewenst?
 
@@ -182,7 +171,7 @@ We gebruiken momenteel een headshot voor de header. Zijn er alternatieven of aan
 - [ ] Anders, namelijk: _______________
 
 ---
-### 15. Extra testimonials
+### 14. Extra testimonials
 
 Testimonials versterken vertrouwen. Meer quotes = sterker bewijs.
 
@@ -194,7 +183,7 @@ Testimonials versterken vertrouwen. Meer quotes = sterker bewijs.
 - [ ] Anders, namelijk: _______________
 
 ---
-### 16. Case studies & cijfers
+### 15. Case studies & cijfers
 
 Concrete resultaten en cijfers maken uw werk tastbaar. Dit overtuigt bezoekers.
 
@@ -209,7 +198,7 @@ Concrete resultaten en cijfers maken uw werk tastbaar. Dit overtuigt bezoekers.
 
 ## 🟢 Nice-to-have (optioneel)
 
-### 17. 404 pagina
+### 16. 404 pagina
 
 We kunnen een custom 404 pagina maken zodat bezoekers een nette foutmelding zien.
 
@@ -220,7 +209,7 @@ We kunnen een custom 404 pagina maken zodat bezoekers een nette foutmelding zien
 - [ ] Anders, namelijk: _______________
 
 ---
-### 18. Video testimonials
+### 17. Video testimonials
 
 Video testimonials zijn zeer overtuigend. Een korte clip van een tevreden klant doet wonderen.
 
@@ -238,9 +227,9 @@ Video testimonials zijn zeer overtuigend. Een korte clip van een tevreden klant 
 | Prioriteit | Aantal |
 |------------|--------|
 | 🔴 Blokkerend | 6 |
-| 🟡 Belangrijk | 10 |
+| 🟡 Belangrijk | 9 |
 | 🟢 Nice-to-have | 2 |
-| **Totaal** | **18** |
+| **Totaal** | **17** |
 
 ---
 

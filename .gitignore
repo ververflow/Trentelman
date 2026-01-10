@@ -1,3 +1,9 @@
+# Source materials (client PDFs, raw photos - too large for git)
+docs/source/
+
+# Analysis outputs (can regenerate with tools)
+analysis/
+
 # Dependencies
 node_modules/
 package-lock.json
@@ -13,3 +19,5 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.log
+*.swp
+*.swo

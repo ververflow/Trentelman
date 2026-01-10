@@ -21,3 +21,4 @@ Website project for Patrick Trentelman - Talentontwikkeling specialist.
 ## Deployment
 
 Deploy the `site/` folder to GitHub Pages.
+# Deployed via GitHub Actions
